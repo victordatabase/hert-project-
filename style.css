@@ -1,6 +1,14 @@
 body {
   background-color: #000;    
   margin: 0;
+  padding: 0; /* Adicionado para garantir */
   overflow: hidden;
   background-repeat: no-repeat;
+  width: 100vw; /* Garante largura total */
+  height: 100vh; /* Garante altura total */
+  touch-action: none; /* Desabilita o zoom de pinça padrão em alguns mobiles */
+}
+
+canvas {
+  display: block; /* Remove espaços extras abaixo do canvas */
 }

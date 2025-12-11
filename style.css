@@ -1,14 +1,31 @@
 body {
   background-color: #000;    
   margin: 0;
-  padding: 0; /* Adicionado para garantir */
   overflow: hidden;
   background-repeat: no-repeat;
-  width: 100vw; /* Garante largura total */
-  height: 100vh; /* Garante altura total */
-  touch-action: none; /* Desabilita o zoom de pinça padrão em alguns mobiles */
+}
+#titulo {
+  position: absolute;
+  top: 10%; /* Distância do topo da tela */
+  width: 100%;
+  text-align: center;
+  color: #ffffff; /* Texto branco */
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem; /* Tamanho do texto */
+  z-index: 10; /* Garante que fique na frente do canvas */
+  pointer-events: none; /* Permite que toques/cliques passem pelo texto */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* Opcional: Efeito de brilho para combinar com o coração */
+  text-shadow: 0 0 20px rgba(255, 20, 147, 0.8); 
+  margin: 0;
 }
 
-canvas {
-  display: block; /* Remove espaços extras abaixo do canvas */
+/* Ajuste para telas menores (Celulares) */
+@media (max-width: 600px) {
+  #main-title {
+    font-size: 2rem;
+    top: 15%;
+  }
 }
